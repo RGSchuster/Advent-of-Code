@@ -3,7 +3,7 @@ frequency = 0
 tracker = {0:True}
 index = 0;
 
-with open('Day 1.txt', 'r') as f:
+with open('Inputs/Day 1.txt', 'r') as f:
     inputList = list(map(int, f.read().splitlines()))
 
 while True:
