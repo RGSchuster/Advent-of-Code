@@ -12,6 +12,8 @@ def compareWords():
             for eachLetter in zip(baseWord,inputList[compareWord]):
                 if eachLetter[0] != eachLetter[1]:
                     differCount += 1
+                    if differCount == 2:
+                        break
                 else:
                     sameLetters.append(eachLetter[0])
             if differCount == 1:
