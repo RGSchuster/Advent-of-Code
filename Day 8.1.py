@@ -4,24 +4,32 @@ with open('Inputs/Day 8.txt','r') as f:
 inputList = [2, 3, 0, 3, 10, 11, 12, 1, 1, 0, 1, 99, 2, 1, 1, 2]
 #   
 
-globalMeta = []
+answer = []
 
-child = inputList.pop(0)
-meta = inputList.pop(0)
+##def builder():
+##    global inputList
+##    global answer
+##    children = inputList.pop(0)
+##    metadata = inputList.pop(0)
+##    for i in range(children + metadata):
+##        answer.append([])
+##    return first, second
+##    
+##while len(inputList) > 0:
+##    first, second = builder()
+##    if first > 0:
+##        continue
 
-def listBuilder(c,m):
-    global globalMeta
-    global inputList
-##    if len(inputList) <= m:
-##        return
-    child = inputList.pop(0)
-    meta = inputList.pop(0)
-    for i in range(m):
-        globalMeta.append(inputList.pop(-1))
-    print(inputList)
-    if child > 0:
-        listBuilder(child,meta)
+childC = 0
+metaC = 0
 
-listBuilder(child,meta)
+while len(inputList) > 0:
+    first = inputList.pop(0)
+    second = inputList.pop(0)
+    if first == 0:
+        print('yay')
+    childC += first
+    metaC += second
+    
 
-
+print(answer)
